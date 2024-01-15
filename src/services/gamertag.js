@@ -11,7 +11,12 @@ function validateGamerTag(gamerTag) {
     return 'Invalid - gamertag must contain at least a special character';
   }
 
-  
+  if (!/\d/.test(gamerTag)) {
+    return 'Invalid - gamertag must contain at least a number';
+  }
+
+  return 'Valid';
+
   }
   
   module.exports = validateGamerTag;
